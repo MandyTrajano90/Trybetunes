@@ -1,5 +1,3 @@
-import './Profile.css';
-
 function Profile() {
   return <h1 className="profile">Profile</h1>;
 }

@@ -1,5 +1,3 @@
-import './Album.css';
-
 function Album() {
   return <h1 className="album">Album</h1>;
 }
