@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom';
-import './Login.css';
 import { useState } from 'react';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
