@@ -1,7 +1,26 @@
+import { Route, Routes } from 'react-router-dom';
+import Login from './components/Login';
+import Search from './components/Search';
+import Album from './components/Album';
+import Favorites from './components/Favorites';
+import NotFound from './components/NotFound';
+import Profile from './components/Profile';
+import ProfileEdit from './components/ProfileEdit';
+
 function App() {
   return (
-    <p>Trybetunes</p>
-
+    <>
+      <p>Trybetunes</p>
+      <Routes>
+        <Route path="/" element={ <Login /> } />
+        <Route path="/search" element={ <Search /> } />
+        <Route path="/album/:id" element={ <Album /> } />
+        <Route path="/favorites" element={ <Favorites /> } />
+        <Route path="/profile" element={ <Profile /> } />
+        <Route path="/profile/edit" element={ <ProfileEdit /> } />
+        <Route path="*" element={ <NotFound /> } />
+      </Routes>
+    </>
   );
 }
 
