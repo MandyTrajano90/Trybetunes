@@ -1,11 +1,11 @@
 import { Route, Routes } from 'react-router-dom';
-import Login from './components/Login';
-import Search from './components/Search';
-import Album from './components/Album';
-import Favorites from './components/Favorites';
-import NotFound from './components/NotFound';
-import Profile from './components/Profile';
-import ProfileEdit from './components/ProfileEdit';
+import Login from './pages/Login';
+import Search from './pages/Search';
+import Album from './pages/Album';
+import Favorites from './pages/Favorites';
+import NotFound from './pages/NotFound';
+import Profile from './pages/Profile';
+import ProfileEdit from './pages/ProfileEdit';
 
 function App() {
   return (
