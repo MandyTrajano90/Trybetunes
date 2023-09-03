@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { SongType } from '../types';
 
 type MusicCardProps = {
@@ -5,6 +6,12 @@ type MusicCardProps = {
 };
 
 function MusicCard({ music }: MusicCardProps) {
+  const [favorite, setFavorite] = useState(false);
+
+  const favMusic = () => {
+    setFavorite(!favorite);
+  };
+
   return (
     <div>
       <h3>{music.trackId}</h3>
@@ -16,6 +23,17 @@ function MusicCard({ music }: MusicCardProps) {
         <code>audio</code>
         .
       </audio>
+      <label data-testid={ `checkbox-music-${music.trackId}` }>
+        <input
+          type="checkbox"
+          onClick={ favMusic }
+          checked={ favorite }
+        />
+        <img
+          src={ `/src/images/${favorite ? 'checked_' : 'empty_'}heart.png` }
+          alt="favorite"
+        />
+      </label>
     </div>
   );
 }
