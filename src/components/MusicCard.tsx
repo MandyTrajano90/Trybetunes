@@ -24,10 +24,6 @@ function MusicCard({ music }: MusicCardProps) {
     setFavorite(!favorite);
   };
 
-  // const favMusic = () => {
-  //   setFavorite(!favorite);
-  // };
-
   return (
     <div>
       <h3>{music.trackId}</h3>
